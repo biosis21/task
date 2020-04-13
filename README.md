@@ -8,7 +8,7 @@ https://biosis21.github.io/task/
 
 https://github.com/biosis21/task
 
-## How to use EmailsInput component
+## How to use `EmailsInput` component
 
 ### How install the component
 

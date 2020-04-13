@@ -15,6 +15,7 @@
         node.setAttribute('type', 'text');
         node.setAttribute('placeholder', 'add more people...');
         node.className = 'email-input';
+        node.style.minWidth = '147px';
 
         node.onkeyup = (e) => {
             const value = e.target.value.replace(/\s/, '');
@@ -22,21 +23,15 @@
             if (value && e.keyCode === KEY.Enter) {
                 onAdd(value);
                 e.target.value = '';
-                return;
-            }
-
-            if (value && e.keyCode === KEY.Comma) {
+            } else if (value && e.keyCode === KEY.Comma) {
                 console.log(value)
                 onAdd(value.replace(',', ''));
                 e.target.value = '';
-                return;
-            }
-
-            if (!value && e.keyCode === KEY.Backspace) {
+            } else if (!value && e.keyCode === KEY.Backspace) {
                 onRemovePrev();
-                return;
             }
 
+            node.style.width = ((e.target.value.length + 1) * 8) + 'px';
         }
 
         node.onblur = (e) => {
