@@ -7,13 +7,6 @@
     const emailsInputNode = EmailsInput();
     emailsInputNode.addEventListener('emails-change', (e) => {
         // The list of emails available in e.detail
-        console.log(1)
-    }, false);
-
-    const emailsInputNode2 = EmailsInput();
-    emailsInputNode2.addEventListener('emails-change', (e) => {
-        // The list of emails available in e.detail
-        console.log(2)
     }, false);
 
     // Create EmailForm component with all nested components
@@ -26,8 +19,7 @@
             }),
             Content({
                 children: [
-                    emailsInputNode,
-                    emailsInputNode2
+                    emailsInputNode
                 ]
             }),
             Footer({
